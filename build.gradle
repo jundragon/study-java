@@ -12,5 +12,12 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compileOnly('org.projectlombok:lombok:1.18.12')
+    annotationProcessor('org.projectlombok:lombok:1.18.12')
+
+    testCompile('org.mockito:mockito-core:2.1.0')
+
+    testCompileOnly('org.projectlombok:lombok:1.18.12')
+    testAnnotationProcessor('org.projectlombok:lombok:1.18.12')
+    testImplementation('junit:junit:4.13')
 }
